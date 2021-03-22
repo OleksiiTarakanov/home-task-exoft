@@ -1,0 +1,10 @@
+<div class="task">
+  <form  color="{{color}}" appBacColor>
+    <label>Enter color in HEX format</label>
+
+    <input type="text" [(ngModel)]="color" name="color" appLettersDigits>
+  </form>
+
+  <div color="{{color}}" appLettersDigits appTextColor>Entered color: #{{color}}</div>
+  <div color="{{color | reverseText}}" appTextColor >Reversed color: #{{color | reverseText}}</div>
+</div>
