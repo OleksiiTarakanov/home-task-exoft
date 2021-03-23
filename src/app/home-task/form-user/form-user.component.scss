@@ -1,0 +1,22 @@
+.form-user{
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 550px;
+        height: 500px;
+    }
+
+    label{
+        margin: 3px;
+    }
+
+    input{
+        margin: 3px;
+    }
+}
+

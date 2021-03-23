@@ -1,0 +1,31 @@
+<div class="form-user">
+  <form [formGroup]="userForm">
+    <label for="username" class="username">Username</label>
+    <input type="text" id="username" [(ngModel)]='user.username' formControlName="username">
+
+    <div class="fullname">
+      <label for="first-name">First name</label>
+      <input type="text" id="first-name" [(ngModel)]="user.firstName" formControlName="firstName">
+
+      <label for="last-name">Last name</label>
+      <input type="text" id="last-name" formControlName="lastName">
+    </div>
+
+    <label for="" class="email">Email</label>
+    <input type="text" id="email" formControlName="email">
+
+    <div class="password">
+      <label for="password">Password</label>
+      <input type="text" id="password" formControlName="password">
+
+      <label for="confirm-password">Confirm password</label>
+      <input type="text" id="confirm-password" formControlName="confirmPassword">
+    </div>
+
+    <label for="status">Status</label>
+    <input type="text" id="status" formControlName="status">
+
+    <button type="button" class="submit" (click)=submit()>Submit</button>
+
+  </form>
+</div>
