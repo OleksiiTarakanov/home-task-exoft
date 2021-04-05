@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MyFirstServiceService } from '../../shared/services/my-first-service.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { MyFirstServiceService } from '../../shared/services/my-first-service.se
   templateUrl: './second.component.html',
   styleUrls: ['./second.component.scss']
 })
-export class SecondComponent implements OnInit {
+export class SecondComponent implements OnInit, OnDestroy {
 
   name: string;
 
@@ -17,4 +17,8 @@ export class SecondComponent implements OnInit {
       this.name = newName;
     });
   };
+
+  ngOnDestroy(): void {
+    this.service.newName$.unsubscribe()
+  }
 }
